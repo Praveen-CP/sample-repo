@@ -25,5 +25,5 @@ class Single
 			obj = new Single();
 		}
 		return obj;
-	}
+	} 
 }
