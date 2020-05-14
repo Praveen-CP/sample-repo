@@ -27,7 +27,7 @@ class Single
 
 	public static Single obj;
 
-	private Single()
+	private Single() 
 	{
 		System.out.println("Instance Created");
 	}
