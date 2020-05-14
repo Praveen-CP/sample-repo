@@ -26,7 +26,7 @@ class Single
 	// Double Checked Locking
 
 	public static Single obj;
-
+ 
 	private Single()
 	{
 		System.out.println("Instance Created");
