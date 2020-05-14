@@ -20,6 +20,6 @@ class Single
 
 	public static Single getInstance()
 	{
-		return obj;
+		return obj; 
 	}
 }
