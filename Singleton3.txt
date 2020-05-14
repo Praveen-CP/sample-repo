@@ -1,0 +1,43 @@
+public class Singleton3
+{
+	public static void main(String[] args)
+	{
+		Thread t1 = new Thread(new Runnable(){
+			public void run()
+			{
+				Single obj1 = Single.getInstance();
+			}
+	});
+		
+		Thread t2 = new Thread(new Runnable(){
+			public void run()
+			{
+				Single obj2 = Single.getInstance(); //Doesn't create
+			}
+	});
+	
+	t1.start();
+	t2.start();
+	}
+}
+
+class Single 
+{
+	//Synchronized instance creation
+
+	public static Single obj;
+
+	private Single()
+	{
+		System.out.println("Instance Created");
+	}
+
+	public static synchronized Single getInstance()
+	{
+		if(obj == null)
+		{
+			obj = new Single();
+		}
+		return obj;
+	}
+}

@@ -1,0 +1,29 @@
+public class Singleton2
+{
+	public static void main(String[] args)
+	{
+		Single obj1 = Single.getInstance();
+		Single obj2 = Single.getInstance(); //Doesn't create
+	}
+}
+
+class Single 
+{
+	//Lazy instance creation
+
+	public static Single obj;
+
+	private Single()
+	{
+		System.out.println("Instance Created");
+	}
+
+	public static Single getInstance()
+	{
+		if(obj == null)
+		{
+			obj = new Single();
+		}
+		return obj;
+	}
+}

@@ -1,0 +1,25 @@
+public class Singleton
+{
+	public static void main(String[] args)
+	{
+		Single obj1 = Single.getInstance();
+		Single obj2 = Single.getInstance();//Doesn't create	
+	}
+}
+
+class Single 
+{
+	//Eagerly instance creation
+
+	static Single obj = new Single(); 
+
+	private Single()
+	{
+		System.out.println("Instance Created");
+	}
+
+	public static Single getInstance()
+	{
+		return obj;
+	}
+}
