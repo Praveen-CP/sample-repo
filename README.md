@@ -1,1 +1,1 @@
-Hello, This is my sample repo.
+These are the different ways of creating Singleton Pattern Design.
