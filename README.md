@@ -1,1 +1,1 @@
-Different ways of creating Singleton Pattern Design.
+Different methods of creating Singleton Pattern Design.
